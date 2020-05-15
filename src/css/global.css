@@ -1,0 +1,81 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://db.onlinewebfonts.com/c/3a47f5f06b5484abfeee9eac90348a9c?family=Gotham');
+
+/* DEFAULT STYLING */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+}
+
+/* GENERAL COMPONENT STYLING */
+.row {
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.full-view {
+    min-height: 100vh;
+}
+
+.nav-with-img {
+    width: 60%;
+}
+
+.nav-with-img img {
+    width: 100%;
+}
+
+main h1 {
+    font-family: 'Gotham', sans-serif;
+}
+
+main h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-brand span {
+    font-size: .8rem;
+    vertical-align: middle;
+}
+
+/* MEDIA QUERIES */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    .nav-with-img {
+        width: 50%;
+    }
+
+    .nav-with-img img {
+        width: 80%;
+    }
+
+}
+
+/* Medium devices (portrait tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .nav-with-img {
+        width: 50%;
+    }
+
+    .nav-with-img img {
+        width: unset;
+    }
+
+    .footer-brand span {
+        font-size: 1.25rem;
+        
+    }
+
+}

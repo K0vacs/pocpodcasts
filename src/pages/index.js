@@ -1,14 +1,25 @@
-import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
+import React, { Component } from "react"
+import Nav from "../components/nav"
+import DesktopHeader from "../components/desktop-header"
+import MobileHeader from "../components/mobile-header"
+import Footer from "../components/footer"
+import withSizes from 'react-sizes'
 
-export default function Home() {
-  return (
-    <div style={{ color: `purple` }}>
-      <Link to="/contact/">Contact</Link>
-      <Header headerText="Hello Gatsby!" />
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </div>
-  )
+// This page is the entrypoint/base or homepage for the application
+class MyComponent extends Component {
+  render() {
+    return (
+      <section className="full-view">
+          <Nav />
+          {this.props.isMobile ? <MobileHeader />: <DesktopHeader />}
+          <Footer />
+      </section>
+    )
+  }
 }
+
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 576,
+})
+
+export default withSizes(mapSizesToProps)(MyComponent)
