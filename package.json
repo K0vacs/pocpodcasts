@@ -23,7 +23,7 @@
     "react-id-swiper": "^3.0.0",
     "react-sizes": "^2.0.0",
     "responsive-react": "^3.0.2",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
